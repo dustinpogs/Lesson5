@@ -20,7 +20,7 @@ function greeting(language) {
   // if language is undefined return 'Hello!'
 
 if (language == "German") {
-  return "Guten tag!";  }
+  return "Guten Tag!";  }
   else if (language == "Mandarin") {
     return "Ni Hao!";
   }
@@ -28,9 +28,9 @@ if (language == "German") {
     return "Hola!";
   } else
   {
-return "hello";
+return "Hello!";
   }
-} greeting(language);
+} 
 
 
 
@@ -51,7 +51,7 @@ function isInRange(num) {
   // otherwise return false
   if (num<50 && num>20) { return true; 
   } else {return false;
-} 
+} }
 
 function isInteger(num) {
   // return true if num is an integer
@@ -63,23 +63,24 @@ function isInteger(num) {
 if (num==Math.floor(num)) {
   return true; 
 } else {return false;
-}
-}
+} }
+
 
 function fizzBuzz(num) {
   // if num is divisible by 3 return 'fizz'
   // if num is divisible by 5 return 'buzz'
   // if num is divisible by 3 & 5 return 'fizzbuzz'
   // otherwise return num
-   if (num%3==0 && num%5!==0) {
+  if (num%3===0  && num%5===0) {
+    return "fizzbuzz"; }
+      else if (num%3===0) {
     return "fizz"; }
-    else if (num%5==0 && num%3 !==0)  {
+    if (num%5===0)  {
       return "buzz"; }
-      else if (num%3==num && num%5==0) {
-       return "fizzbuz"; }
-
-      }  }
-      
+       else return num;
+      }  
+    
+    
 
 
 function isPrime(num) {
@@ -88,18 +89,14 @@ function isPrime(num) {
   // hint: a prime number is only evenly divisible by itself and 1
   // hint2: you can solve this using a for loop
   // note: 0 and 1 are NOT considered prime numbers
- if (num<2) return false;
- for (var i=2;i<num;i++) {
-   if (num%i==0) {
-    return false; } else { return true;}
- } 
-
+ if (num<=1) { return false;} 
+ else if (num%2===1)
+        return true; 
+        else return false;
 }
+ 
 
-// Do not modify code below this line.
-// --------------------------------
-
-module.exports = {
+ module.exports = {
   getBiggest,
   greeting,
   isTenOrFive,
@@ -108,3 +105,7 @@ module.exports = {
   fizzBuzz,
   isPrime,
 };
+
+// Do not modify code below this line.
+// --------------------------------
+
